@@ -1,0 +1,11 @@
+version: "3"
+services:
+  workzone:
+    build: .
+    command: vue ui
+    volumes:
+      - ./code:/code:z
+      - .vuerc:/root/.vuerc:z
+    ports:
+      - 8000:8000
+      - 8080:8080
